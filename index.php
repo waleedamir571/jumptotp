@@ -1,7 +1,7 @@
 <?php include 'partials/header.php' ?>
 
 <!-- ===================== HERO ===================== -->
-<section class="hero" id="hero">
+<section class="hero" id="hero" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <!-- Background wave SVG -->
   <div class="hero-bg">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1728 815" preserveAspectRatio="xMidYMid slice">
@@ -2585,7 +2585,7 @@
 </section>
 
 <!-- ===================== STATS BAR ===================== -->
-<div class="ptb-100">
+<div class="ptb-100"data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
   <section class="stats-bar" id="stats">
     <div class="stat-block" style="background:linear-gradient(106deg, #2d74b7 7.7%, #6298cc 101%)">
       <div class="stat-num">15%</div>
@@ -2635,7 +2635,7 @@
   </section>
 </div>
 
-<section class="revenue-section">
+<section class="revenue-section" data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
   <div class="revenue-grid">
     <div class="revenue-image">
       <!-- Dark blue image placeholder with gradient overlay -->
@@ -2664,7 +2664,7 @@
 
 
 <!-- ===================== SECTION 11: CONSULTATION FORM ===================== -->
-<section class="services-section" id="services">
+<section class="services-section" id="services" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <div class="services-inner">
     <div class="services-header">
       <h2 class="services-title"><strong>Uniquely Positioned to</strong> Power Real Revenue Growth</h2>
@@ -2763,7 +2763,7 @@
 </section>
 
 <!-- ===================== SECTION 5: TURN YOUR MARKETING (Website Analyzer) ===================== -->
-<section class="analyzer-section" id="analyzer">
+<section class="analyzer-section" id="analyzer" data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
   <div class="analyzer-grid">
     <div class="analyzer-left">
       <h2 class="move-title">Turn Your Marketing Into a <span class="revenue"> Revenue Engine </span></h2>
@@ -2780,7 +2780,7 @@
   </div>
 </section>
 
-<section class="why-section" id="why">
+<section class="why-section" id="why" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <div class="why-inner">
     <h2 class="why-title">Built for Your Scale “Jump to Top”</h2>
     <div class="section-underline orange"></div>
@@ -2816,7 +2816,7 @@
 </section>
 
 <!-- ===================== SECTION 6: PROVEN RESULTS (Dark) ===================== -->
-<section class="proven-section" id="proven">
+<section class="proven-section" id="proven" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <div class="proven-bg-pattern"></div>
   <div class="proven-inner">
     <div class="proven-header">
@@ -2873,7 +2873,7 @@
   </div>
 </section>
 
-<section class="cases-section" id="cases">
+<section class="cases-section" id="cases" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <div class="cases-bg"></div>
   <div class="cases-inner">
     <div class="cases-header">
@@ -2959,7 +2959,7 @@
 
 </section>
 
-<section class="testi-section" id="testimonials">
+<section class="testi-section" id="testimonials" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <div class="testi-inner">
     <div class="testi-header">
       <h2 class="testi-title">Our Customers Say</h2>
@@ -3078,7 +3078,7 @@
 
 
 
-<section class="faq-section" id="faq">
+<section class="faq-section" id="faq" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
   <div class="faq-inner">
     <h2 class="faq-title">FAQ on Software Development</h2>
     <div class="section-underline orange"></div>
