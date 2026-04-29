@@ -2585,7 +2585,7 @@
 </section>
 
 <!-- ===================== STATS BAR ===================== -->
-<div class="ptb-100"data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
+<div class="ptb-100" data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
   <section class="stats-bar" id="stats">
     <div class="stat-block" style="background:linear-gradient(106deg, #2d74b7 7.7%, #6298cc 101%)">
       <div class="stat-num">15%</div>
@@ -2636,26 +2636,36 @@
 </div>
 
 <section class="revenue-section" data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
-  <div class="revenue-grid">
-    <div class="revenue-image">
-      <!-- Dark blue image placeholder with gradient overlay -->
-      <img src="assets/images/pic3.png" alt="">
-    </div>
-    <div class="revenue-content">
-      <div class="section-label">2026 is the year of the "Zero-Click" search.</div>
-      <div class="section-underline orange"></div>
-      <p class="revenue-text">Users no longer want a list of links; they want an answer. If your brand isn't being cited
-        by ChatGPT, Claude, and Google AI Overviews, you’re losing $60\%$ of your potential market share before they
-        even visit your site.</p>
+  <div class="container-fluid">
 
-      <p class="jump">The Jump To Top Edge:</p>
+    <div class="row align-center">
+      <div class="col-md-5">
+        <div class="revenue-image">
+          <!-- Dark blue image placeholder with gradient overlay -->
+          <img src="assets/images/pic3.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="revenue-content">
+          <div class="section-label">2026 is the year of the "Zero-Click" search.</div>
+          <div class="section-underline orange"></div>
+          <p class="revenue-text">Users no longer want a list of links; they want an answer. If your brand isn't being
+            cited
+            by ChatGPT, Claude, and Google AI Overviews, you’re losing $60\%$ of your potential market share before they
+            even visit your site.</p>
 
-      <p class="revenue-text">We don't just chase algorithms, we influence the models that build them.</p>
-      <div class="read-more-link">
-        <span>Read More</span>
-        <div class="link-underline"></div>
+          <p class="jump">The Jump To Top Edge:</p>
+
+          <p class="revenue-text">We don't just chase algorithms, we influence the models that build them.</p>
+          <div class="read-more-link">
+            <span>Read More</span>
+            <div class="link-underline"></div>
+          </div>
+        </div>
       </div>
     </div>
+
+
   </div>
 </section>
 

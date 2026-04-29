@@ -181,6 +181,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js" defer></script>
+  <!-- <script src="assets/js/protection.js" defer></script> -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

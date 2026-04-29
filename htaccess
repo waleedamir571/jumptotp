@@ -1,0 +1,72 @@
+# ============================================================
+#  JUMPTOTOP — .htaccess v2 (PHP Shield Edition)
+# ============================================================
+
+Options -Indexes
+ServerSignature Off
+
+RewriteEngine On
+
+# ─── 1. AUTO-PREPEND shield.php ON EVERY REQUEST ─────────────
+# Change the path below to your actual full server path
+php_value auto_prepend_file /home/yourhostusername/public_html/jumptotp/shield.php
+
+# ─── 2. BLOCK KNOWN BAD USER-AGENTS (backup layer) ───────────
+SetEnvIfNoCase User-Agent "HTTrack"           bad_bot
+SetEnvIfNoCase User-Agent "WebCopier"         bad_bot
+SetEnvIfNoCase User-Agent "WebZIP"            bad_bot
+SetEnvIfNoCase User-Agent "SiteSnagger"       bad_bot
+SetEnvIfNoCase User-Agent "TeleportPro"       bad_bot
+SetEnvIfNoCase User-Agent "Offline Explorer"  bad_bot
+SetEnvIfNoCase User-Agent "Wget"              bad_bot
+SetEnvIfNoCase User-Agent "curl"              bad_bot
+SetEnvIfNoCase User-Agent "Scrapy"            bad_bot
+SetEnvIfNoCase User-Agent "python-requests"   bad_bot
+SetEnvIfNoCase User-Agent "libwww-perl"       bad_bot
+SetEnvIfNoCase User-Agent "Go-http-client"    bad_bot
+SetEnvIfNoCase User-Agent "ia_archiver"       bad_bot
+SetEnvIfNoCase User-Agent "Wayback"           bad_bot
+SetEnvIfNoCase User-Agent "MJ12bot"           bad_bot
+SetEnvIfNoCase User-Agent "AhrefsBot"         bad_bot
+SetEnvIfNoCase User-Agent "SemrushBot"        bad_bot
+SetEnvIfNoCase User-Agent "^$"                bad_bot
+
+<RequireAll>
+  Require all granted
+  Require not env bad_bot
+</RequireAll>
+
+# ─── 3. BLOCK DIRECT ACCESS TO SHIELD & LOG FILES ────────────
+<FilesMatch "(shield\.php|shield_blocked\.log|shield_rate\.json)$">
+  Require all denied
+</FilesMatch>
+
+# ─── 4. HOTLINK PROTECTION ───────────────────────────────────
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?hoisolution\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?jumptotop\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg|css|js|pdf|woff|woff2|ttf)$ - [F,NC,L]
+
+# ─── 5. SECURITY HEADERS ─────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set X-Robots-Tag "noarchive, nosnippet"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header unset Server
+  Header unset X-Powered-By
+
+  <FilesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# ─── 6. BLOCK SENSITIVE FILES ────────────────────────────────
+<FilesMatch "\.(env|log|bak|sql|sh|py|rb|pl|cfg|ini)$">
+  Require all denied
+</FilesMatch>
+
+FileETag None
+Header unset ETag
